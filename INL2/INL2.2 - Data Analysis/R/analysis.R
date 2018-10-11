@@ -10,9 +10,6 @@ test_shapiro <- shapiro.test(d)
 
 pdf("integrated.pdf",width=5,height=5)
 
-boxplot(d,
-        las = 1,ylab="time (min)")
-
 # Boxplot for both IDEs
 boxplot(IDEA_time, IDEB_time,
         las = 1,ylab="time (min)", 
