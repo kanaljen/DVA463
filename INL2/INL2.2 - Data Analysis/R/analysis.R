@@ -8,7 +8,7 @@ t.test(IDEA_time, IDEB_time, paired = TRUE,alternative=NULL)
 d <- with(analysis, IDEA_time - IDEB_time)
 shapiro.test(d)
 
-pdf("integrated.pdf",width=5,height=5)
+#pdf("integrated.pdf",width=5,height=5)
 
 # Boxplot for both IDEs
 boxplot(IDEA_time, IDEB_time,
@@ -44,4 +44,4 @@ hist(d,xlab="time difference (min)",
      ylab = "No subjects",
      main="")
 
-dev.off()
+#dev.off()
