@@ -1,12 +1,12 @@
 analysis <- read.csv("integrated.csv",head=TRUE,sep=";")
 attach(analysis)
 
-test_wilcox <- wilcox.test(IDEA_time, IDEB_time, paired = TRUE)
+wilcox.test(IDEA_time, IDEB_time, paired = TRUE)
 
-test_t_test <- t.test(IDEA_time, IDEB_time, paired = TRUE)
+t.test(IDEA_time, IDEB_time, paired = TRUE,alternative=NULL)
 
 d <- with(analysis, IDEA_time - IDEB_time)
-test_shapiro <- shapiro.test(d)
+shapiro.test(d)
 
 #pdf("integrated.pdf",width=5,height=5)
 
